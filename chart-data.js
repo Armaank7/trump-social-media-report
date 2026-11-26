@@ -1097,30 +1097,27 @@ const chartData = {
  },
  "scorecard": {
   "labels": [
-   "Activity",
-   "Engagement %",
+   "Frequency",
+   "Engagement",
    "Virality",
-   "Followers",
-   "Overall (my own average)"
+   "Followers"
   ],
   "twitter": [
    72,
-   61,
-   93,
    100,
-   82
+   93,
+   100
   ],
   "truthSocial": [
    100,
+   88,
    100,
-   100,
-   11,
-   78
+   21
   ]
  },
  "scorecardTable": [
   [
-   "Own posts per active day",
+   "Frequency (own posts per active day)",
    "11.4",
    "15.9"
   ],
@@ -1130,14 +1127,14 @@ const chartData = {
    "13,545"
   ],
   [
-   "Followers",
-   "88.7 million",
-   "about 10 million"
+   "Followers (average over the period)",
+   "about 54 million",
+   "about 11.5 million"
   ],
   [
-   "Engagement (median likes as % of followers)",
-   "0.082%",
-   "0.135%"
+   "Engagement (median likes per post as % of followers)",
+   "0.13%",
+   "0.12%"
   ],
   [
    "Virality (shares per like)",
@@ -1145,9 +1142,9 @@ const chartData = {
    "0.24"
   ],
   [
-   "Overall (my own average, out of 100)",
-   "82",
-   "78"
+   "Overall (my own simple average of the four, out of 100)",
+   "91",
+   "77"
   ]
  ]
 };
