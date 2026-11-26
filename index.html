@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Trump wins online</title>
+<meta name="description" content="A briefing for the Atlantic Data Institute. 89,324 Trump posts on Twitter and Truth Social, scored against his own normal, to find what his base rewards and what other politicians can learn in 2026.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="page">
+    <p class="eyebrow">A briefing for the Atlantic Data Institute</p>
+    <h1>How Trump wins online, and what other politicians can take from it</h1>
+    <p class="dek">I scored 89,324 of his posts on Twitter and Truth Social against his own normal at the time, to find what his base rewards, what it ignores and which lessons still hold in 2026.</p>
+    <p class="byline">Armaan Khan, for Knox. 26 November 2026.</p>
+    <nav class="contents" aria-label="Contents">
+      <h2 class="contents-title">On this page</h2>
+      <ol>
+        <li><a href="#summary">The short version</a></li>
+        <li><a href="#why">Why he does so well</a></li>
+        <li><a href="#base">What works with his base</a></li>
+        <li><a href="#coalition">Lessons from his coalition</a></li>
+        <li><a href="#compare">Other senior politicians</a></li>
+        <li><a href="#y2026">What still works in 2026</a></li>
+        <li><a href="#tool">The tool I built</a></li>
+        <li><a href="#method">How I did it</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="summary" class="page split">
+  <h2>The short version</h2>
+  <div class="findings">
+    <h3>Picking fights pays</h3>
+    <p>Posts that give an opponent a nickname or attack the media do 16 to 25% better than his posts without them, on both platforms and across ten years. Praise is his weakest tone.</p>
+    <h3>His own words beat everything else</h3>
+    <p>On Truth Social, posts written in his own words score 1.23 times his normal. Posts that are only an image or video score 0.89, and posts that are only a link score 0.74.</p>
+    <h3>Every extra post dilutes the rest</h3>
+    <p>On days he posts one to three times, each post scores 1.64 times his normal. On days with more than 30 posts, each one scores 0.80.</p>
+    <h3>His favourite topic is wearing out</h3>
+    <p>Elections make up a quarter of his Truth Social posts in his own words, and are his weakest topic. Election posts have scored lower every year since 2023, while everything else has held steady.</p>
+    <h3>Truth Social holds the base, but it didn't win 2024</h3>
+    <p>His audience there is a ninth of his old Twitter following, though each follower engages more. The groups that moved towards him in 2024, such as young men and first-time voters, were the ones his campaign chased on podcasts and creator channels.</p>
+  </div>
+</section>
+
+<section id="timeline" class="band tint">
+  <div class="page">
+    <h2>Seventeen years in one chart</h2>
+    <div class="text">
+      <p>He went from TV personality (2009 to 2014) to candidate (2015 to 2016) and president (2017 to 2020) on Twitter. After the ban that followed 6 January 2021, he launched his own platform, Truth Social, in 2022, and now governs from it. He now posts more than he did in his first term: about 16 posts of his own a day, up from 11.</p>
+    </div>
+    <figure class="chart-figure">
+      <figcaption>
+        <span class="fig-title">His posts per month, 2009 to April 2026</span>
+        Posts in his own words on each platform, and reposts of other people's posts on both.
+      </figcaption>
+      <div class="chart tall">
+        <canvas id="timelineChart" role="img" aria-label="Line chart of posts per month. His own tweets peak at about 900 a month in 2013 and 1,119 in January 2015, fall to about 190 a month in 2017, then rise again in 2019 and 2020 alongside heavy reposting. On Truth Social he averages about 600 to 700 a month in 2023 and 2024.">
+          <p>His own tweets peak at about 900 a month in 2013 and 1,119 in January 2015, fall to about 190 a month in 2017, then rise again in 2019 and 2020 alongside heavy reposting. On Truth Social he averages about 600 to 700 a month in 2023 and 2024.</p>
+        </canvas>
+      </div>
+    </figure>
+    <div class="text">
+      <h3>How each post is scored</h3>
+      <p>A like in 2015 isn't worth the same as a like in 2025. His audience grew, Twitter grew, and Truth Social is far smaller than Twitter ever was. So I compared each post with his typical post that month on the same platform. A score of 1 means a post got his usual number of likes for that month, 2 means double and 0.5 means half.</p>
+      <p>That gives 49,381 scored posts: 23,580 tweets from his campaign launch in July 2015 to January 2021, and 25,801 Truth Social posts from 2022 to April 2026. Reposts of other people's posts aren't scored.</p>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="page">
+  <h2>Why does he do so well on social media?</h2>
+  <p class="lead">Three habits run through ten years of posts. He picks fights, he writes the way he talks, and he never lets the news cycle move on without him.</p>
+
+  <div class="text">
+    <h3>He picks fights</h3>
+    <p>Nicknames for opponents, attacks on the media and mentions of the other side all lift a post, on Twitter and Truth Social alike. He isn't unusual here. A study of 2.7 million posts by US news outlets and members of Congress found that each word about the political out-group raised the odds of a post being shared by 67%.</p>
+  </div>
+  <figure class="chart-figure">
+    <figcaption>
+      <span class="fig-title">How much each feature changes a post's score</span>
+      Median score of posts with each feature compared with posts without it. Posts in his own words, Twitter July 2015 to January 2021 and Truth Social 2022 to April 2026.
+    </figcaption>
+    <div class="chart tall">
+      <canvas id="stylesChart" role="img" aria-label="Bar chart. On both platforms, nicknames, media attacks, mentions of the other side, capitals, exclamation marks and questions raise a post's score by 10 to 31%. Links lower it by 27 to 29%.">
+        <p>Nicknames, media attacks, mentions of the other side, capitals, exclamation marks and questions raise a post's score by 10 to 31% on both platforms. Links lower it by 27 to 29%.</p>
+      </canvas>
+    </div>
+  </figure>
+
+  <div class="text">
+    <h3>He writes the way he talks</h3>
+    <p>Capitals and exclamation marks help too, and anything that isn't his own words does worse. On Truth Social, an image or video on its own scores 0.89 and a bare link 0.74, against 1.23 for a post in his own words. Links do badly on both platforms. A link asks people to leave, and his followers are there to hear from him.</p>
+  </div>
+  <figure class="chart-figure narrow">
+    <figcaption>
+      <span class="fig-title">Score by type of post</span>
+      Median score. The Twitter archive has no image-only posts, so that bar is Truth Social only.
+    </figcaption>
+    <div class="chart">
+      <canvas id="typesChart" role="img" aria-label="Bar chart. Posts in his own words score 1.03 on Twitter and 1.23 on Truth Social. Image or video only posts score 0.89 on Truth Social. Link only posts score 0.68 on Twitter and 0.74 on Truth Social.">
+        <p>Posts in his own words score 1.03 on Twitter and 1.23 on Truth Social. Image or video only posts score 0.89 on Truth Social. Link only posts score 0.68 on Twitter and 0.74 on Truth Social.</p>
+      </canvas>
+    </div>
+  </figure>
+
+  <div class="text">
+    <h3>He never lets the news cycle move on</h3>
+    <p>The more he posts in a day, the less each post gets. On Truth Social, each post scores 1.64 on his quietest days and 0.80 on days with more than 30 posts. The volume still wins him attention overall, because there is always a new post to react to, but each message is weaker for it.</p>
+    <p>Timing matters less than volume. On Truth Social, his posts between 7 and 9am (US Eastern) do best and his late-morning posts do worst. As president on Twitter, 8 to 11am was his best window.</p>
+  </div>
+  <div class="pair">
+    <figure class="chart-figure">
+      <figcaption>
+        <span class="fig-title">Posts that day against the score of each post</span>
+        Median score, by how many posts he made that day. Twitter 2017 to January 2021, Truth Social 2022 to April 2026.
+      </figcaption>
+      <div class="chart">
+        <canvas id="volumeChart" role="img" aria-label="Bar chart. On Truth Social each post scores 1.64 on days with 1 to 3 posts, falling to 0.80 on days with more than 30. On Twitter it falls from 1.28 to 0.78.">
+          <p>On Truth Social each post scores 1.64 on days with 1 to 3 posts, falling to 0.80 on days with more than 30. On Twitter it falls from 1.28 to 0.78.</p>
+        </canvas>
+      </div>
+    </figure>
+    <figure class="chart-figure">
+      <figcaption>
+        <span class="fig-title">Hour of posting against score</span>
+        Median score by hour, US Eastern time. Hours with fewer than 100 posts are left out.
+      </figcaption>
+      <div class="chart">
+        <canvas id="timingChart" role="img" aria-label="Line chart. On Truth Social, posts at 7am score 1.32 and posts at 11am score 0.80. On Twitter as president, posts between 8 and 10am score about 1.1.">
+          <p>On Truth Social, posts at 7am score 1.32 and posts at 11am score 0.80. On Twitter as president, posts between 8 and 10am score about 1.1.</p>
+        </canvas>
+      </div>
+    </figure>
+  </div>
+  <div class="text">
+    <p>These effects hold up when tested together. A statistical model of his Truth Social posts, which also allows for topic, hour and how much he posted that day, finds that a link costs a post 21% of its score. Nicknames add 13%, exclamation marks 13%, media attacks 9% and heavy capitals 7%. Each doubling of his posts in a day lowers each one's score by about 16%.</p>
+  </div>
+  <aside class="takeaway" aria-label="What this means">
+    <h3>What this means</h3>
+    <p>Conflict and a personal voice travel further than polish. The habit others shouldn't copy is the volume. A sitting president stays the story whatever he posts. Anyone else gets more from fewer, sharper posts.</p>
+  </aside>
+</section>
+
+<section id="base" class="page">
+  <h2>Which posts do best and worst with his base?</h2>
+  <p class="lead">His base rewards strength and grievance aimed at a clear target. It has tired of election talk, and it barely reacts to praise.</p>
+  <div class="text">
+    <p>Truth Social is the closest thing in this data to a direct line to his base. In Pew's 2022 study, two-thirds of people who got news on alternative platforms like it were Republicans, and half of its most prominent accounts were pro-Trump or right-leaning.</p>
+  </div>
+  <figure class="chart-figure">
+    <figcaption>
+      <span class="fig-title">Topics: how often he posts about them and how well they do</span>
+      Median score by topic, Truth Social posts in his own words, with the share of his posts under each topic. Elections, his most frequent topic, is in black. Posts the labels couldn't place reliably are left out.
+    </figcaption>
+    <div class="chart">
+      <canvas id="topicsChart" role="img" aria-label="Bar chart of Truth Social topics. Foreign policy scores 1.42, immigration 1.35, legal 1.33, media 1.20, economy 1.20 and elections 1.09, although elections make up 26% of his posts.">
+        <p>Foreign policy scores 1.42, immigration 1.35, legal 1.33, media 1.20, economy 1.20 and elections 1.09, although elections make up 26% of his posts.</p>
+      </canvas>
+    </div>
+  </figure>
+  <div class="pair">
+    <figure class="chart-figure">
+      <figcaption>
+        <span class="fig-title">Tone of the post</span>
+        Median score on Truth Social, using the tone labels supplied with the data, which I checked by hand (see method). Praise is in black.
+      </figcaption>
+      <div class="chart tall">
+        <canvas id="tonesChart" role="img" aria-label="Bar chart of tone. Threats score 1.68, policy statements 1.41, denials 1.39, boasts and accusations 1.35, insults 1.31, calls to action 1.21 and praise 1.02.">
+          <p>Threats score 1.68, policy statements 1.41, denials 1.39, boasts and accusations 1.35, insults 1.31, calls to action 1.21 and praise 1.02.</p>
+        </canvas>
+      </div>
+    </figure>
+    <figure class="chart-figure">
+      <figcaption>
+        <span class="fig-title">Election posts are wearing out</span>
+        Median score on Truth Social by year. 2026 covers January to April.
+      </figcaption>
+      <div class="chart tall">
+        <canvas id="electionsChart" role="img" aria-label="Line chart. Election posts score 1.20 in 2022 and 1.24 in 2023, then fall to 1.05, 1.00 and 0.74 in early 2026. All other posts stay between 1.22 and 1.40.">
+          <p>Election posts score 1.20 in 2022 and 1.24 in 2023, then fall to 1.05, 1.00 and 0.74 in early 2026. All other posts stay between 1.22 and 1.40.</p>
+        </canvas>
+      </div>
+    </figure>
+  </div>
+  <div class="text">
+    <h3>What works</h3>
+    <p>Foreign policy (1.42), immigration (1.35) and his legal battles (1.33). Threats are his strongest tone at 1.68, followed by policy announcements such as new tariffs (1.41), denials (1.39), and boasts and accusations (both 1.35).</p>
+    <h3>What flops</h3>
+    <p>Elections, a quarter of his posts in his own words, score 1.09. Election posts scored 1.24 in 2023 and 0.74 in early 2026, while his other posts stayed between 1.22 and 1.40. Praise, his second most common tone, scores 1.02, barely above his normal. Treat that one with some care: in my hand check, 5 of 13 posts labelled Praise were really him praising himself or asking people to act.</p>
+  </div>
+  <aside class="takeaway" aria-label="What this means">
+    <h3>What this means</h3>
+    <p>His two weakest areas are things he does a lot, so habit is costing him reach. Any politician can run the same check on their own feed: score each topic against their own normal every month, and drop a message once it stops landing.</p>
+  </aside>
+</section>
+
+<section id="coalition" class="page">
+  <h2>What can other politicians learn about the groups in his coalition?</h2>
+  <p class="lead">His own feed holds his base together. The groups that swung to him in 2024 were reached somewhere else.</p>
+  <div class="text">
+    <p>The Knox Index measures how far a politician reaches beyond the political bubble, and that is the right test here. Truth Social is a loyal, closed room: a ninth of his old Twitter audience, with more engagement from each follower. The groups that moved most in 2024 were the ones his campaign went looking for on podcasts, sport channels and creator shows.</p>
+  </div>
+  <div class="table-scroll" role="region" aria-label="Groups in his 2024 coalition" tabindex="0">
+    <table>
+      <caption>The groups in his 2024 coalition, and what reached them</caption>
+      <thead>
+        <tr><th scope="col">Group</th><th scope="col">What changed in 2024</th><th scope="col">Where they were reached</th><th scope="col">What to take from it</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Core base: rural, churchgoing and non-graduate voters</th><td>Rural voters backed him 69 to 29, regular churchgoers 64 to 34 and non-graduates 56 to 42. Three in ten of his voters are white evangelicals.</td><td>His own feed: high volume, conflict and his own voice</td><td>An owned channel keeps your core loyal and informed. It won't grow your vote.</td></tr>
+        <tr><th scope="row">Young men</th><td>Men under 50 went from Biden +10 in 2020 to Trump +1. Men aged 18 to 29 moved 8 points towards him.</td><td>Long-form podcasts (Joe Rogan's audience is about 80% male), sport and wrestling pages, and creators like the Nelk Boys</td><td>Go on the shows they already watch, and lead with entertainment.</td></tr>
+        <tr><th scope="row">Hispanic and Black voters</th><td>Hispanic voters went from 61 to 36 for Biden to 51 to 48 for Harris. His share of Black voters nearly doubled, from 8% to 15%.</td><td>Mostly outside his own feed</td><td>Big swings can happen among people your base content never reaches.</td></tr>
+        <tr><th scope="row">New and occasional voters</th><td>People who skipped 2020 but voted in 2024 backed him 54 to 42.</td><td>Creators and podcasts rather than political accounts</td><td>Meet people who don't follow politics where they already spend their time.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <aside class="takeaway" aria-label="What this means">
+    <h3>What this means</h3>
+    <p>Keep the two jobs apart. Conflict-heavy content energises people who already agree with you. Reaching anyone else takes different formats, voices and places, usually outside politics. Copying his base strategy without his base gets you the fights without the loyalty.</p>
+  </aside>
+</section>
+
+<section id="compare" class="page">
+  <h2>How does he compare with other senior US politicians?</h2>
+  <p class="lead">Attacks lift engagement for everyone. The standout new success of 2025 did almost the opposite.</p>
+  <div class="text">
+    <p>The study behind the 67% figure looked at members of Congress too: each word about the other side lifted shares by 65 to 180%. Since 2024, other politicians have tried his methods, with mixed results.</p>
+  </div>
+  <div class="table-scroll" role="region" aria-label="Comparison with other politicians" tabindex="0">
+    <table class="compare">
+      <caption>Trump compared with three accounts that made headlines in 2025</caption>
+      <thead>
+        <tr><th scope="col"><span class="visually-hidden">Measure</span></th><th scope="col">Trump</th><th scope="col">Gavin Newsom's press office</th><th scope="col">The White House</th><th scope="col">Zohran Mamdani</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Style</th><td>Conflict, capitals, nicknames</td><td>Copied Trump's style: capitals, nicknames, memes</td><td>Memes and AI-made images</td><td>Upbeat, local, about the cost of living</td></tr>
+        <tr><th scope="row">Format</th><td>Text in his own words</td><td>Text and memes on X</td><td>Video and images, on TikTok since August 2025</td><td>Short videos in Hindi, Urdu, Spanish, Bangla and Arabic</td></tr>
+        <tr><th scope="row">Result</th><td>A ninth of his old Twitter audience on Truth Social, but each follower engages more</td><td>250,000 new followers and 225 million impressions in a few weeks (his office's figures)</td><td>18 million new followers across platforms since the inauguration</td><td>From about 1% in early polls to winning the primary with 56%, then the mayoralty in November 2025</td></tr>
+        <tr><th scope="row">Risk</th><td>Fatigue, and little reach outside the base</td><td>A borrowed voice, mostly reaching people who already dislike Trump</td><td>Critics say engagement fades fast and policy gets buried</td><td>Harder to repeat beyond one city</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text">
+    <p>Newsom shows that copying his style gets attention quickly, mostly from people who already oppose Trump. Mamdani shows the other route: a positive, local, video-first voice that reached people who don't usually follow politics. That is the bridge Trump's own feed doesn't build.</p>
+  </div>
+  <aside class="takeaway" aria-label="What this means">
+    <h3>What this means</h3>
+    <p>His tactics can be borrowed. His position can't. The politicians who gained most in 2025 brought his energy to a voice of their own.</p>
+  </aside>
+</section>
+
+<section id="y2026" class="band ink">
+  <div class="page">
+    <h2>2016 or 2026: what still works and what has changed</h2>
+    <div class="columns">
+      <div>
+        <h3>Still works</h3>
+        <ul>
+          <li>Conflict with a named target</li>
+          <li>A recognisable personal voice</li>
+          <li>Posts written for the platform instead of links away from it</li>
+          <li>Fewer, sharper posts, for anyone who isn't the president</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Has changed</h3>
+        <ul>
+          <li>Video comes first. One in five US adults now regularly get news on TikTok, up from 3% in 2020, and so do 39% of under-30s.</li>
+          <li>X reaches far fewer Americans than YouTube (84% of adults) or Facebook (71%).</li>
+          <li>AI-made images are normal now, even from official accounts.</li>
+          <li>Podcasts and creators reached the swing voters of 2024.</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="playbook-title">A playbook for 2026</h3>
+    <ol class="playbook">
+      <li><h4>Have a target</h4><p>Contrast drives sharing. Aim it at an opponent or an issue, and never at the voters you want.</p></li>
+      <li><h4>Sound like a person</h4><p>Write in your own voice and post directly on the platform. Links and polished graphics both cost reach.</p></li>
+      <li><h4>Ration your posts</h4><p>Each extra post dilutes the rest. Post when your audience is online, which is rarely when the office opens.</p></li>
+      <li><h4>Watch for fatigue</h4><p>Score your own posts by topic every month, and retire messages that have stopped working.</p></li>
+      <li><h4>Split base and bridge</h4><p>Use your own channels for supporters. Reach everyone else through creators, podcasts and short video.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="tool" class="page">
+  <h2>The tool I built: a post scorer for any politician</h2>
+  <div class="text">
+    <p>Everything above comes from a small Python tool I built so the same analysis can run on anyone's posts. It takes a spreadsheet with a date, the text and the like counts for each post, and works in four steps. The numbers below are from this run.</p>
+  </div>
+  <ol class="flow" aria-label="How the tool works">
+    <li><h3>Clean</h3><p>89,325 rows in. I dropped 1 duplicate, rebuilt the broken IDs, separated 16,957 reposts and converted every time to US Eastern.</p></li>
+    <li><h3>Tag</h3><p>Style tags by fixed rules. Topics from a text model trained and tested on 14,161 labelled posts, right 73% of the time on posts it hadn't seen.</p></li>
+    <li><h3>Score</h3><p>Each post against his median that month on the same platform. 49,381 posts scored.</p></li>
+    <li><h3>Scorecard</h3><p>Four measures modelled on the Knox Index, plus my own overall average.</p></li>
+  </ol>
+  <div class="scorecard">
+    <figure class="chart-figure">
+      <figcaption>
+        <span class="fig-title">A scorecard modelled on the Knox Index</span>
+        His first term on Twitter against his second term on Truth Social. Each measure is scaled so the higher of the two scores 100.
+      </figcaption>
+      <div class="chart radar">
+        <canvas id="scorecardChart" role="img" aria-label="Radar chart comparing Twitter 2017 to 2020 with Truth Social 2025 to 2026. Truth Social scores higher on activity, engagement and virality. Twitter scores far higher on followers.">
+          <p>Truth Social 2025 to 2026 scores higher on activity, engagement and virality. Twitter 2017 to 2020 scores far higher on followers.</p>
+        </canvas>
+      </div>
+    </figure>
+    <div class="table-scroll" role="region" aria-label="Scorecard figures" tabindex="0">
+      <table class="numbers">
+        <caption>The figures behind the scorecard</caption>
+        <thead><tr><th scope="col">Measure</th><th scope="col">Twitter 2017 to 2020</th><th scope="col">Truth Social 2025 to 2026</th></tr></thead>
+        <tbody id="scorecardTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="text">
+    <p>The overall score is my own simple average of the four measures, because Knox's own formula isn't public. Followers aren't in the data, so they come from news reports: 88.7 million on Twitter when he was banned, and more than 10 million on Truth Social in mid-2025. With the August 2026 figure of about 13 million, his engagement rate would be 0.10%, still above his Twitter rate.</p>
+    <p>The same scorecard could run on any leader's archive and sit alongside the Knox Index World Leaders view. The code, the notebook and instructions are in <a href="https://github.com/Armaank7/trump-social-media-report">the project on GitHub</a>.</p>
+  </div>
+</section>
+
+<section id="method" class="page">
+  <h2>How I did it</h2>
+  <div class="text">
+    <p>The data was 56,571 tweets (May 2009 to January 2021) and 32,754 Truth Social posts (February 2022 to April 2026), supplied by Knox for this brief. I cleaned and analysed it in Python (pandas and scikit-learn) with SQL queries in DuckDB, and built the charts with Chart.js.</p>
+  </div>
+  <div class="table-scroll" role="region" aria-label="Problems in the data" tabindex="0">
+    <table>
+      <caption>Problems I found in the data, and what I did about them</caption>
+      <thead><tr><th scope="col">Problem</th><th scope="col">What I did</th></tr></thead>
+      <tbody>
+        <tr><td>Excel had rounded most tweet IDs, creating about 21,000 fake duplicates</td><td>Built my own ID for every post</td></tr>
+        <tr><td>The Truth Social repost column said False on every row, though 6,953 posts were reposts</td><td>Rebuilt it from posts starting with "RT"</td></tr>
+        <tr><td>761 of his own tweets showed 0 likes, almost all from 2012 and 2013</td><td>Treated them as missing</td></tr>
+        <tr><td>Likes on early tweets were counted years later, after people dug up his old posts. Some 2013 tweets had over 150,000 likes in months when his typical tweet got about 20</td><td>Scored tweets only from July 2015, after his campaign launch. My outlier check is what caught this</td></tr>
+        <tr><td>The emotion column was blank or "unknown" on every row</td><td>Dropped it</td></tr>
+        <tr><td>Topic and tone labels came with no explanation of how they were made</td><td>Checked 80 by hand before using them. The topic labels held up, and the tone labels mostly did (details below)</td></tr>
+        <tr><td>Times were in UTC, and some were written in a different format</td><td>Converted everything to US Eastern</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text">
+    <h3>Checking the labels by hand</h3>
+    <p>I checked a random sample of 80 posts by hand: 50 Truth Social posts with the labels that came in the file, and 30 tweets with the topic my model gave them. Answers I wasn't sure about are left out.</p>
+    <p>The supplied topic labels were right for 43 of 47 posts, and for all 37 on the six topics this report uses. The supplied tone labels were right for 41 of 48, but Praise was the weakest: 5 of 13 posts labelled Praise were really something else, mostly him praising himself. My model's topics for tweets were right for 25 of 30, with Media the weakest. One person did this check, so treat the percentages as rough. It shows the topic findings can be trusted and the praise finding needs care.</p>
+    <h3>Where I used AI</h3>
+    <p>I used Claude, an AI assistant, to help write the Python and SQL, build the charts and this page, and speed up the outside research. I set the approach and made the decisions: how to score posts, what to drop, where scoring starts and which findings matter. I checked 80 of the supplied labels by hand and reviewed all the code and output. Those checks caught mistakes in AI drafts, including a claim that he posts more than ever (he posted more in 2013) and a best posting time based on only 21 posts.</p>
+    <p>The full method note, the notebook and the tool's code are in <a href="https://github.com/Armaank7/trump-social-media-report">the project on GitHub</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="sources">
+  <div class="page">
+    <h2>Sources</h2>
+    <ol>
+      <li>Pew Research Center, <a href="https://www.pewresearch.org/politics/2025/06/26/behind-trumps-2024-victory-a-more-racially-and-ethnically-diverse-voter-coalition/">Behind Trump's 2024 victory</a> and <a href="https://www.pewresearch.org/politics/2025/06/26/demographic-profiles-of-trump-and-harris-voters-in-2024/">Demographic profiles of Trump and Harris voters</a>, June 2025.</li>
+      <li>Rathje, Van Bavel and van der Linden, Out-group animosity drives engagement on social media, PNAS, 2021. <a href="https://www.cam.ac.uk/stories/viralpolitics">University of Cambridge summary of the study</a>.</li>
+      <li>Pew Research Center, <a href="https://www.pewresearch.org/short-reads/2025/09/25/1-in-5-americans-now-regularly-get-news-on-tiktok-up-sharply-from-2020/">1 in 5 Americans now regularly get news on TikTok</a>, September 2025.</li>
+      <li>Pew Research Center, <a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/">Americans' social media use 2025</a>, November 2025.</li>
+      <li>Pew Research Center, <a href="https://www.pewresearch.org/short-reads/2022/11/18/key-facts-about-truth-social-as-donald-trump-runs-for-u-s-president-again/">Key facts about Truth Social</a>, November 2022.</li>
+      <li>Yahoo News, <a href="https://www.yahoo.com/news/articles/gavin-newsom-trolled-way-top-100500974.html">How Gavin Newsom trolled his way to the top of social media</a>, 2025.</li>
+      <li>CNN via KRDO, <a href="https://krdo.com/news/2025/08/24/clever-and-a-little-bit-offensive-inside-the-white-houses-norm-breaking-social-media-strategy/">Inside the White House's norm-breaking social media strategy</a>, August 2025.</li>
+      <li>Al Jazeera, <a href="https://www.aljazeera.com/economy/2025/7/17/how-zohran-mamdani-reached-a-multilingual-multicultural-new-york">How Zohran Mamdani reached a multilingual New York</a>, July 2025, and PBS NewsHour, <a href="https://www.pbs.org/newshour/politics/democrat-zohran-mamdani-wins-new-york-city-mayors-race">Mamdani wins New York City mayor's race</a>, November 2025.</li>
+      <li>Washington Post via Anchorage Daily News, <a href="https://adn.com/nation-world/2024/11/10/inside-the-online-offensive-that-turned-out-a-new-generation-of-men-for-trump">Inside the online offensive that turned out a new generation of men for Trump</a>, November 2024.</li>
+      <li>CNBC, <a href="https://www.cnbc.com/2021/01/08/twitter-permanently-suspends-trumps-account.html">Twitter permanently suspends Trump's account</a>, January 2021 (88.7 million followers).</li>
+      <li>Yahoo News, <a href="https://www.yahoo.com/news/truth-revealed-trump-posts-social-154033108.html">How Trump posts to his social site 17 times a day</a>, 2025 (more than 10 million followers), and Newsweek, <a href="https://www.newsweek.com/paid-access-to-truth-social-is-here-who-runs-the-most-influential-accounts-12276562">Paid access to Truth Social is here</a>, August 2026 (about 13 million).</li>
+      <li>Knox, <a href="https://index.knox.digital/worldleaders">The Knox Index, World Leaders</a>.</li>
+    </ol>
+  </div>
+</footer>
+
+<script src="js/chart.umd.js"></script>
+<script src="chart-data.js"></script>
+<script src="charts.js"></script>
+</body>
+</html>
