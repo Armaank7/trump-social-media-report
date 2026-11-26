@@ -101,9 +101,14 @@ def summarise(own):
     for tag_name in STYLE_TAGS:
         with_tag = text_posts.loc[text_posts[tag_name], 'score'].median()
         without = text_posts.loc[~text_posts[tag_name], 'score'].median()
+        # A tag can match no posts at all (another politician's nicknames, for example), so there's nothing to compare
+        if pd.isna(with_tag) or pd.isna(without) or without == 0:
+            change = None
+        else:
+            change = round((with_tag / without - 1) * 100)
         style_rows.append({'tag': tag_name, 'posts_with_tag': int(text_posts[tag_name].sum()),
                            'median_with': round(with_tag, 2), 'median_without': round(without, 2),
-                           'change_pct': round((with_tag / without - 1) * 100)})
+                           'change_pct': change})
     styles = pd.DataFrame(style_rows)
 
     per_day = scored.groupby('day')['score'].transform('count')

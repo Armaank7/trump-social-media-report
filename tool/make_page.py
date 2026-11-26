@@ -75,14 +75,15 @@ elections = [r for r in d['elections'] if r['platform'] == 'Truth Social']
 # Scorecard: each measure scaled so the higher period = 100, plus my own simple average
 card = {r['period']: r for r in d['scorecard']}
 tw, ts = card['Twitter 2017-20'], card['Truth Social 2025-26']
-measures = [('Activity', 'posts_per_day'), ('Engagement %', 'engagement_pct'), ('Virality', 'shares_per_like'), ('Followers', 'followers')]
+# Named after the Knox Index measures. Engagement here is likes per follower, not the Knox formula
+measures = [('Frequency', 'posts_per_day'), ('Engagement', 'engagement_pct'), ('Virality', 'shares_per_like'), ('Followers', 'followers')]
 tw_scaled, ts_scaled = [], []
 for _, col in measures:
     top = max(tw[col], ts[col])
     tw_scaled.append(round(tw[col] / top * 100))
     ts_scaled.append(round(ts[col] / top * 100))
-tw_scaled.append(round(sum(tw_scaled) / 4))
-ts_scaled.append(round(sum(ts_scaled) / 4))
+tw_overall = round(sum(tw_scaled) / 4)
+ts_overall = round(sum(ts_scaled) / 4)
 
 chart_data = {
     'timeline': {'labels': months, 'twitter': twitter_line, 'truthSocial': truth_line,
@@ -108,15 +109,15 @@ chart_data = {
     'elections': {'labels': [str(r['year']) if r['year'] < 2026 else '2026 so far' for r in elections],
                   'elections': [r['election_score'] for r in elections],
                   'other': [r['other_score'] for r in elections]},
-    'scorecard': {'labels': [m for m, _ in measures] + ['Overall (my own average)'],
+    'scorecard': {'labels': [m for m, _ in measures],
                   'twitter': tw_scaled, 'truthSocial': ts_scaled},
     'scorecardTable': [
-        ['Own posts per active day', f"{tw['posts_per_day']:.1f}", f"{ts['posts_per_day']:.1f}"],
+        ['Frequency (own posts per active day)', f"{tw['posts_per_day']:.1f}", f"{ts['posts_per_day']:.1f}"],
         ['Median likes per post', f"{tw['median_likes']:,.0f}", f"{ts['median_likes']:,.0f}"],
-        ['Followers', '88.7 million', 'about 10 million'],
-        ['Engagement (median likes as % of followers)', f"{tw['engagement_pct']:.3f}%", f"{ts['engagement_pct']:.3f}%"],
+        ['Followers (average over the period)', f"about {tw['followers'] / 1e6:.0f} million", f"about {ts['followers'] / 1e6:.1f} million"],
+        ['Engagement (median likes per post as % of followers)', f"{tw['engagement_pct']:.2f}%", f"{ts['engagement_pct']:.2f}%"],
         ['Virality (shares per like)', f"{tw['shares_per_like']:.2f}", f"{ts['shares_per_like']:.2f}"],
-        ['Overall (my own average, out of 100)', str(tw_scaled[-1]), str(ts_scaled[-1])],
+        ['Overall (my own simple average of the four, out of 100)', str(tw_overall), str(ts_overall)],
     ],
 }
 
