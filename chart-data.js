@@ -1127,7 +1127,7 @@ const chartData = {
    "13,545"
   ],
   [
-   "Followers (average over the period)",
+   "Followers (midpoint of start and end)",
    "about 54 million",
    "about 11.5 million"
   ],
