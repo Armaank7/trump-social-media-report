@@ -114,7 +114,7 @@ chart_data = {
     'scorecardTable': [
         ['Frequency (own posts per active day)', f"{tw['posts_per_day']:.1f}", f"{ts['posts_per_day']:.1f}"],
         ['Median likes per post', f"{tw['median_likes']:,.0f}", f"{ts['median_likes']:,.0f}"],
-        ['Followers (average over the period)', f"about {tw['followers'] / 1e6:.0f} million", f"about {ts['followers'] / 1e6:.1f} million"],
+        ['Followers (midpoint of start and end)', f"about {tw['followers'] / 1e6:.0f} million", f"about {ts['followers'] / 1e6:.1f} million"],
         ['Engagement (median likes per post as % of followers)', f"{tw['engagement_pct']:.2f}%", f"{ts['engagement_pct']:.2f}%"],
         ['Virality (shares per like)', f"{tw['shares_per_like']:.2f}", f"{ts['shares_per_like']:.2f}"],
         ['Overall (my own simple average of the four, out of 100)', str(tw_overall), str(ts_overall)],
